@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerInteractions : RenderObject
 {
+    public Action TriggerDialogue;
+
     protected override void Start()
     {
         base.Start();
@@ -18,6 +21,10 @@ public class PlayerInteractions : RenderObject
             }
             else {
                 sprRenderer.sortingOrder = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                TriggerDialogue();
             }
         }
     }
