@@ -8,6 +8,8 @@ public class RegularDialogue : Dialogue
     [SerializeField] protected string[] _sentences;
     public string[] Sentences { get { return _sentences; } set { value = _sentences; } }
 
-    [SerializeField] protected float[] _sentenceDuration;
-    public float[] SentDuration { get { return _sentenceDuration; } set { value = _sentenceDuration; } }
+    public override string[] GetSentences()
+    {
+        return _sentences;
+    }
 }

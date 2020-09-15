@@ -15,4 +15,9 @@ public class Constants : MonoBehaviour
         public const int LEVEL_BOUNDS = 8;
         public const int NPC          = 10;
     }
+
+    public class Amount
+    {
+        public const int OF_OPTION_WINDOWS = 4;
+    }
 }

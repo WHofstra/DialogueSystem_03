@@ -6,6 +6,8 @@ using System;
 public class DialogueSystem : MonoBehaviour
 {
     public Action Activate;
+    public Action<string[]> Options;
+    public Action<string, string> ChangeToNext;
 
     [SerializeField] PlayerInteractions _player;
     [SerializeField] NPCTrigger[] _npcs;
@@ -24,8 +26,23 @@ public class DialogueSystem : MonoBehaviour
         }
     }
 
-    void PutInQueue()
+    void PutInQueue(string npcName, Dialogue[] dialogueSet)
     {
+        StopAllCoroutines();
         Activate();
+        StartCoroutine(ActivationCoroutine(1.0f, npcName, dialogueSet[0].GetSentences()[0], dialogueSet[0].GetOptions()));
+    }
+
+    IEnumerator ActivationCoroutine(float seconds, string npcName, string sentence, string[] options)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        if (sentence != null) {
+            ChangeToNext(npcName, sentence);
+        }
+
+        if (options[0] != null) {
+            Options(options);
+        }
     }
 }

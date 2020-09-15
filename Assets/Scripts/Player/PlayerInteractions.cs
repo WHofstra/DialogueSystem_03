@@ -5,11 +5,19 @@ using System;
 
 public class PlayerInteractions : RenderObject
 {
-    public Action TriggerDialogue;
-
     protected override void Start()
     {
         base.Start();
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.layer.Equals(Constants.Layer.NPC))
+        {
+            if (col.GetComponent<NPCDialogue>() != null) {
+                npcDialogue = col.GetComponent<NPCDialogue>();
+            }
+        }
     }
 
     void OnTriggerStay2D(Collider2D col)
@@ -24,7 +32,9 @@ public class PlayerInteractions : RenderObject
             }
 
             if (Input.GetKeyDown(KeyCode.Space)) {
-                TriggerDialogue();
+                if (npcDialogue != null) {
+                    TriggerDialogue(npcDialogue.Name, npcDialogue.DialogueSet);
+                }
             }
         }
     }

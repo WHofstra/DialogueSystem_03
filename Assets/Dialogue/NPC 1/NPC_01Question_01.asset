@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f430e86920889d4fbc473c059f47e16, type: 3}
+  m_Name: NPC_01Question_01
+  m_EditorClassIdentifier: 
+  _typeSpeed: 40
+  _sentence: You will bail me out, won't you?
+  _options:
+  - Not a chance.
+  - How much did you say the bail was?
+  - Your cousin's got somehing, right?
+  - I can pay you... A visit in the county jail, that is.

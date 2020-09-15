@@ -1062,6 +1062,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7621868823315170078, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
 --- !u!4 &911183555 stripped
@@ -1691,6 +1695,10 @@ PrefabInstance:
     - target: {fileID: 7621868823315170078, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
       propertyPath: m_Name
       value: NPC (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621868823315170078, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
@@ -4598,6 +4606,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 278060848}
     m_Modifications:
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogue.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogueSet.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _name
+      value: Townsknight
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogue.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 195f429369f14684c851534bc95ba7df, type: 2}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogue.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2ae7cbfb4523eb4c8b4e1ff7ec5c227, type: 2}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogueSet.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b2ae7cbfb4523eb4c8b4e1ff7ec5c227, type: 2}
+    - target: {fileID: 1251847542407072859, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
+      propertyPath: _dialogueSet.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 195f429369f14684c851534bc95ba7df, type: 2}
     - target: {fileID: 1808674380789444008, guid: 02106389383e37248b5d28bd129cbeef, type: 3}
       propertyPath: m_Size.x
       value: 0.8
