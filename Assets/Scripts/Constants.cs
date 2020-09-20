@@ -20,4 +20,9 @@ public class Constants : MonoBehaviour
     {
         public const int OF_OPTION_WINDOWS = 4;
     }
+
+    public class ConnectionPoint
+    {
+        public enum Type { In, Out }
+    }
 }
