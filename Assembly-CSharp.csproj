@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Node.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteractions.cs" />
     <Compile Include="Assets\Scripts\Dialogue\ClickableOptionScript.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCDialogue.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Assets\Scripts\Dialogue\DialogueDisplay.cs" />
     <Compile Include="Assets\Scripts\Dialogue\DialogueSystem.cs" />
     <Compile Include="Assets\Scripts\NPC\NPCTrigger.cs" />
+    <Compile Include="Assets\Scripts\Dialogue\DialogueEditor.cs" />
     <Compile Include="Assets\Scripts\Dialogue\RegularDialogue.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\RenderObject.cs" />
