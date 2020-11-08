@@ -30,7 +30,10 @@ public class DialogueSystem : MonoBehaviour
     {
         StopAllCoroutines();
         Activate();
-        StartCoroutine(ActivationCoroutine(1.0f, npcName, dialogueSet[0].GetSentences()[0], dialogueSet[0].GetOptions()));
+
+        if (dialogueSet.Length > 0) {
+            StartCoroutine(ActivationCoroutine(1.0f, npcName, dialogueSet[0].GetSentences()[0], dialogueSet[0].GetOptions()));
+        }
     }
 
     IEnumerator ActivationCoroutine(float seconds, string npcName, string sentence, string[] options)

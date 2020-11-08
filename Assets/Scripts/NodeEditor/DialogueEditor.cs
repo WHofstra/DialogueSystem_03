@@ -213,7 +213,6 @@ public class DialogueEditor : EditorWindow
             }
         }
         GUI.changed = true;
-        Debug.Log("Dragging Grid");
     }
 
     private void SetNodeDragging()
