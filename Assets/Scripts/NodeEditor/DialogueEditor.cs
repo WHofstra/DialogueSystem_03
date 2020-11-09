@@ -16,7 +16,6 @@ public class DialogueEditor : EditorWindow
     private GUIStyle inPointStyle;
     private GUIStyle outPointStyle;
 
-    private Vector2 dragZero = new Vector2(0, 0);
     private Vector2 drag;
     private Vector2 offset;
 
