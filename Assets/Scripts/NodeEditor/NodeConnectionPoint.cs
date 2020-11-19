@@ -2,23 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Xml.Serialization;
 
 public class NodeConnectionPoint
 {
-    public Action<NodeConnectionPoint> ConnectionPoint;
+    [XmlIgnore] public Action<NodeConnectionPoint> ConnectionPoint;
 
     private Constants.ConnectionPoint.Type type;
     private Node node;
     private GUIStyle style;
     private Rect rect;
+    private string iD;
 
-    public Constants.ConnectionPoint.Type Type { get { return type; } set { value = type; } }
-    public Node Node { get { return node; } set { value = node; } }
-    public GUIStyle Style { get { return style; } set { value = style; } }
-    public Rect Rectangle { get { return rect; } set { value = rect; } }
+    [XmlIgnore] public Constants.ConnectionPoint.Type Type { get { return type; } set { value = type; } }
+    [XmlIgnore] public Node Node { get { return node; } set { value = node; } }
+    [XmlIgnore] public GUIStyle Style { get { return style; } set { value = style; } }
+    [XmlIgnore] public Rect Rectangle { get { return rect; } set { value = rect; } }
+    [XmlIgnore] public string ID { get { return iD; } set { value = iD; } }
+
+    public NodeConnectionPoint()
+    {
+
+    }
 
     public NodeConnectionPoint(Node node, Constants.ConnectionPoint.Type type, GUIStyle style,
-                               Action<NodeConnectionPoint> ConnectionPoint)
+                               Action<NodeConnectionPoint> ConnectionPoint, string iD = null)
     {
         //Assign Node to NodeConnectionPoint
         this.node = node;
@@ -29,6 +37,9 @@ public class NodeConnectionPoint
         this.style = style;
         this.ConnectionPoint = ConnectionPoint;
         rect = new Rect(0, 0, 10f, 20f);
+
+        //Give ID to NodeConnectionPoint
+        this.iD = iD ?? Guid.NewGuid().ToString();
     }
 
     public void Draw()

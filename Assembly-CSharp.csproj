@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\XML\XMLConverter.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\NodeEditor\Node.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInteractions.cs" />
@@ -79,7 +80,6 @@
     <Compile Include="Assets\Scripts\Dialogue\Scriptable\RegularDialogue.cs" />
     <Compile Include="Assets\Scripts\Dialogue\Scriptable\Dialogue.cs" />
     <Compile Include="Assets\Scripts\RenderObject.cs" />
-    <Compile Include="Assets\Scripts\XML\XMLConverter.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>F:/Media College/GD3/POR/Unity/DialogueSystem_03/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

@@ -25,4 +25,10 @@ public class Constants : MonoBehaviour
     {
         public enum Type { In, Out }
     }
+
+    public class Menu
+    {
+        public const float BAR_HEIGHT    = 20f;
+        public const float LETTER_LENGTH = 8.75f;
+    }
 }

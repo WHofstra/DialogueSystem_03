@@ -3,33 +3,41 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using System.Xml.Serialization;
 
 public class Node
 {
-    public Action Dragging;
-    public Action<Node> RemoveNode;
+    [XmlIgnore] public Action Dragging;
+    [XmlIgnore] public Action<Node> RemoveNode;
 
     private NodeConnectionPoint inPoint;
     private NodeConnectionPoint outPoint;
-    private Rect rect;
 
     private GUIStyle style;
     private GUIStyle defaultStyle;
     private GUIStyle selectedStyle;
 
+    private Rect rect;
+
     private string title;
     private bool isDragging;
     private bool isSelected;
 
-    public NodeConnectionPoint InPoint { get { return inPoint; } set { value = inPoint; } }
-    public NodeConnectionPoint OutPoint { get { return outPoint; } set { value = outPoint; } }
+    [XmlIgnore] public NodeConnectionPoint InPoint { get { return inPoint; } set { value = inPoint; } }
+    [XmlIgnore] public NodeConnectionPoint OutPoint { get { return outPoint; } set { value = outPoint; } }
+    [XmlIgnore] public GUIStyle Style { get { return style; } set { value = style; } }
+    [XmlIgnore] public GUIStyle DefaultStyle { get { return defaultStyle; } set { value = defaultStyle; } }
+    [XmlIgnore] public GUIStyle SelectedStyle { get { return selectedStyle; } set { value = selectedStyle; } }
+    [XmlIgnore] public string Title { get { return title; } set { value = title; } }
+    [XmlIgnore] public bool IsDragging { get { return isDragging; } set { value = isDragging; } }
+    [XmlIgnore] public bool IsSelected { get { return isSelected; } set { value = isSelected; } }
+
     public Rect Rectangle { get { return rect; } set { value = rect; } }
-    public GUIStyle Style { get { return style; } set { value = style; } }
-    public GUIStyle DefaultStyle { get { return defaultStyle; } set { value = defaultStyle; } }
-    public GUIStyle SelectedStyle { get { return selectedStyle; } set { value = selectedStyle; } }
-    public string Title { get { return title; } set { value = title; } }
-    public bool IsDragging { get { return isDragging; } set { value = isDragging; } }
-    public bool IsSelected { get { return isSelected; } set { value = isSelected; } }
+
+    public Node()
+    {
+
+    }
 
     public Node(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle,
                 GUIStyle outPointStyle, Action<NodeConnectionPoint> OnClickInPoint, Action<NodeConnectionPoint> OnClickOutPoint,
@@ -69,7 +77,7 @@ public class Node
                     {
                         //Drag When Clicking
                         isDragging = true;
-                        Dragging();
+                        //Dragging();
 
                         GUI.changed = true;
                         isSelected = true;

@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System;
+using System.Xml.Serialization;
 
 public class NodeConnection
 {
-    public Action<NodeConnection> RemoveConnection;
+    [XmlIgnore] public Action<NodeConnection> RemoveConnection;
 
     private NodeConnectionPoint inPoint;
     private NodeConnectionPoint outPoint;
 
-    public NodeConnectionPoint InPoint { get { return inPoint; } set { value = inPoint; } }
-    public NodeConnectionPoint OutPoint { get { return outPoint; } set { value = outPoint; } }
+    [XmlIgnore] public NodeConnectionPoint InPoint { get { return inPoint; } set { value = inPoint; } }
+    [XmlIgnore] public NodeConnectionPoint OutPoint { get { return outPoint; } set { value = outPoint; } }
+
+    public NodeConnection()
+    {
+
+    }
 
     public NodeConnection(NodeConnectionPoint inPoint, NodeConnectionPoint outPoint,
                           Action<NodeConnection> RemoveConnection)
